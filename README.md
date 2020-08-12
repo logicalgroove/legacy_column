@@ -1,3 +1,5 @@
+[![circleci](https://circleci.com/gh/logicalgroove/legacy_column.svg?style=shield)](https://app.circleci.com/pipelines/github/logicalgroove/legacy_column)
+
 # LegacyColumn
 
 A gem that will print a message if a developer is trying to use a column that is from a legacy system but has to stay there.
