@@ -1,8 +1,8 @@
 example_id                            | status | run_time        |
 ------------------------------------- | ------ | --------------- |
-./spec/legacy_column_spec.rb[1:1:1]   | passed | 0.00176 seconds |
-./spec/legacy_column_spec.rb[1:1:2]   | passed | 0.00028 seconds |
-./spec/legacy_column_spec.rb[1:1:3:1] | passed | 0.01047 seconds |
-./spec/legacy_column_spec.rb[1:2:1]   | passed | 0.00025 seconds |
-./spec/legacy_column_spec.rb[1:2:2]   | passed | 0.00011 seconds |
-./spec/legacy_column_spec.rb[1:2:3:1] | passed | 0.00291 seconds |
+./spec/legacy_column_spec.rb[1:1:1]   | passed | 0.00277 seconds |
+./spec/legacy_column_spec.rb[1:1:2]   | passed | 0.00015 seconds |
+./spec/legacy_column_spec.rb[1:1:3:1] | passed | 0.0109 seconds  |
+./spec/legacy_column_spec.rb[1:2:1]   | passed | 0.00027 seconds |
+./spec/legacy_column_spec.rb[1:2:2]   | passed | 0.00009 seconds |
+./spec/legacy_column_spec.rb[1:2:3:1] | passed | 0.00388 seconds |
