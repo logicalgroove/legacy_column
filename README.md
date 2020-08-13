@@ -1,4 +1,5 @@
-[![circleci](https://circleci.com/gh/logicalgroove/legacy_column.svg?style=shield)](https://app.circleci.com/pipelines/github/logicalgroove/legacy_column)
+[![Build Status](https://circleci.com/gh/logicalgroove/legacy_column.svg?style=shield)](https://app.circleci.com/pipelines/github/logicalgroove/legacy_column)
+[![License](https://img.shields.io/badge/License-MIT-yellowgreen.svg)](https://img.shields.io/badge/License-MIT-yellowgreen.svg)
 
 # LegacyColumn
 
