@@ -13,9 +13,11 @@ module LegacyColumn
   end
 
   module ClassMethods
-    DEFAULT_MESSAGE = 'This column is set as legacy and should not be used anymore'
+    DEFAULT_MESSAGE = 'This column is set as legacy and should not be used anymore.'
 
     def legacy_column(*columns, message:nil)
+      return unless columns
+
       self.legacy_column_names = columns
       self.legacy_column_message = message || DEFAULT_MESSAGE
 
