@@ -1,4 +1,3 @@
-
 lib = File.expand_path("../lib", __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "legacy_column/version"
@@ -14,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/logicalgroove/legacy_column"
   spec.license       = "MIT"
 
-  spec.files        = Dir["{lib,spec}/**/*", "[A-Z]*", "init.rb"]
+  spec.files         = Dir["{lib,spec}/**/*", "[A-Z]*", "init.rb"]
   spec.require_paths = ["lib"]
 
   spec.required_rubygems_version = ">= 1.3.4"

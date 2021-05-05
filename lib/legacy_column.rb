@@ -15,7 +15,7 @@ module LegacyColumn
   module ClassMethods
     DEFAULT_MESSAGE = 'This column is set as legacy and should not be used anymore.'
 
-    def legacy_column(*columns, message:nil)
+    def legacy_column(*columns, message: nil)
       return unless columns
 
       self.legacy_column_names = columns
@@ -27,7 +27,7 @@ module LegacyColumn
 
   def legacy_column
     legacy_column_names.each do |column|
-      if changed_attributes.keys.include? column.to_s
+      if changed_attributes.key?(column.to_s)
         puts "\n\nUSE of legacy column detected.\n  #{self.class} => #{column}\n  #{legacy_column_message}\n\n"
       end
     end
