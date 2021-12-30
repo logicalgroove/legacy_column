@@ -1,29 +1,29 @@
 PATH
   remote: .
   specs:
-    legacy_column (0.1.1)
+    legacy_column (0.1.2)
       activerecord (>= 4.0.0)
       activesupport (>= 4.0.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    activemodel (6.0.3.6)
-      activesupport (= 6.0.3.6)
-    activerecord (6.0.3.6)
-      activemodel (= 6.0.3.6)
-      activesupport (= 6.0.3.6)
-    activesupport (6.0.3.6)
+    activemodel (6.1.4.4)
+      activesupport (= 6.1.4.4)
+    activerecord (6.1.4.4)
+      activemodel (= 6.1.4.4)
+      activesupport (= 6.1.4.4)
+    activesupport (6.1.4.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 0.7, < 2)
-      minitest (~> 5.1)
-      tzinfo (~> 1.1)
-      zeitwerk (~> 2.2, >= 2.2.2)
-    concurrent-ruby (1.1.8)
+      i18n (>= 1.6, < 2)
+      minitest (>= 5.1)
+      tzinfo (~> 2.0)
+      zeitwerk (~> 2.3)
+    concurrent-ruby (1.1.9)
     diff-lcs (1.4.4)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    minitest (5.14.4)
+    minitest (5.15.0)
     rake (13.0.1)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
@@ -39,20 +39,19 @@ GEM
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
     sqlite3 (1.4.2)
-    thread_safe (0.3.6)
-    tzinfo (1.2.9)
-      thread_safe (~> 0.1)
-    zeitwerk (2.4.2)
+    tzinfo (2.0.4)
+      concurrent-ruby (~> 1.0)
+    zeitwerk (2.5.3)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 1.17)
+  bundler (>= 2.2.33)
   legacy_column!
   rake (~> 13.0.1)
   rspec (~> 3.2)
   sqlite3 (~> 1.4.2)
 
 BUNDLED WITH
-   1.17.2
+   2.3.4
