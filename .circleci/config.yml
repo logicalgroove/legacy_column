@@ -11,6 +11,6 @@ jobs:
       - checkout
       # Update bundler
       - run: gem update --system
-      - run: ruby/bundle-install
+      - run: bundle install
       # Run the tests
       - run: bundle exec rake
