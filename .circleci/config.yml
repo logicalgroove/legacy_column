@@ -10,8 +10,11 @@ jobs:
     steps:
       - checkout
       # Update bundler
-      - run: gem update --system
-      - run: bundle update --bundler
+      - run:
+          name: install dependencies
+          command: |
+            gem update --system
+            gem install bundler
       - run: bundle install
       # Run the tests
       - run: bundle exec rake
