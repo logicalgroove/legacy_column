@@ -9,8 +9,12 @@ jobs:
     executor: ruby/default
     steps:
       - checkout
+      # Update bundler
       - run:
-          name: Which bundler?
-          command: bundle -v
-      - ruby/bundle-install
+          name: install dependencies
+          command: |
+            gem update --system
+            gem install bundler
+      - run: bundle install
+      # Run the tests
       - run: bundle exec rake
