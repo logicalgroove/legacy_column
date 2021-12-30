@@ -10,8 +10,8 @@ jobs:
     steps:
       - checkout
       - run:
-        name: Update bundler
-        command: gem update --system
+          name: Update bundler
+          command: gem update --system
       - run:
           name: Which bundler?
           command: bundle -v
