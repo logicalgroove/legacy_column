@@ -1,0 +1,40 @@
+# Gem packaging
+*.gem
+pkg/
+vendor/cache/
+
+# Bundler
+.bundle/
+Gemfile.lock
+
+# Test database files
+spec/db/*.sqlite
+spec/db/*.sqlite3
+*.db
+
+# Ruby/Rails temporary files
+.DS_Store
+*.swp
+*.swo
+*~
+
+# IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+CLAUDE.md
+
+# RSpec status file
+.rspec_status
+
+# Coverage reports
+coverage/
+.simplecov
+
+# Logs
+*.log
+
+# Temporary files
+tmp/
+.tmp/

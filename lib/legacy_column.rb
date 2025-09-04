@@ -27,8 +27,12 @@ module LegacyColumn
 
   def legacy_column
     legacy_column_names.each do |column|
-      if changed_attributes.key?(column.to_s)
-        puts "\n\nUSE of legacy column detected.\n  #{self.class} => #{column}\n  #{legacy_column_message}\n\n"
+      if changes_to_save.key?(column.to_s)
+        if defined?(Rails) && Rails.logger
+          Rails.logger.warn "\n\nUSE of legacy column detected.\n  #{self.class} => #{column}\n  #{legacy_column_message}\n\n"
+        else
+          puts "\n\nUSE of legacy column detected.\n  #{self.class} => #{column}\n  #{legacy_column_message}\n\n"
+        end
       end
     end
   end

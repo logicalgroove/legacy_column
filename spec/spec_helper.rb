@@ -5,8 +5,14 @@ require "active_record"
 require "yaml"
 
 config = YAML::load(IO.read(File.join(File.dirname(__FILE__), 'db', 'database.yml')))
-ActiveRecord::Base.configurations = {'test' => config[ENV['DB'] || 'sqlite3']}
-ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations['test'])
+db_config = config[ENV['DB'] || 'sqlite3']
+
+if ActiveRecord::VERSION::MAJOR >= 6
+  ActiveRecord::Base.establish_connection(db_config)
+else
+  ActiveRecord::Base.configurations = {'test' => db_config}
+  ActiveRecord::Base.establish_connection(ActiveRecord::Base.configurations['test'])
+end
 
 # Load Test Schema into the Database
 load(File.dirname(__FILE__) + "/db/schema.rb")

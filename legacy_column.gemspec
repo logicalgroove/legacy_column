@@ -18,10 +18,10 @@ Gem::Specification.new do |spec|
 
   spec.required_rubygems_version = ">= 1.3.4"
 
-  spec.add_dependency "activesupport", [">= 4.0.0"]
-  spec.add_dependency "activerecord", [">= 4.0.0"]
+  spec.add_dependency "activesupport", [">= 5.2.0", "< 9.0"]
+  spec.add_dependency "activerecord", [">= 5.2.0", "< 9.0"]
   spec.add_development_dependency "bundler", ">= 2.2.33"
   spec.add_development_dependency "rake", "~> 13.0.1"
   spec.add_development_dependency "rspec", "~> 3.2"
-  spec.add_development_dependency "sqlite3", "~> 1.4.2"
+  spec.add_development_dependency "sqlite3", ">= 1.4.0"
 end
