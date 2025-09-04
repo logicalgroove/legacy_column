@@ -26,6 +26,8 @@ This gem supports:
 
 ## Usage
 
+### Basic Usage
+
 Just list the column names:
 ```ruby
 legacy_column :old_email, :old_phone_number
@@ -36,19 +38,60 @@ A custom message can be added:
 legacy_column :old_email, :old_phone_number, message: 'Do not touch this!!!'
 ```
 
-It will output something like this in Rails logs:
+### Read Access Detection
 
+By default, the gem only detects write operations (when columns are modified). To also detect read access, use the `detect_reads` option:
+
+```ruby
+legacy_column :old_email, :old_phone_number, detect_reads: true
 ```
-Use of legacy column detected.
+
+This will warn whenever the legacy columns are accessed:
+
+```ruby
+legacy_column :old_status, message: 'This field is deprecated!', detect_reads: true
+
+user.old_status  # Will log a warning about read access
+user.old_status = 'active'  # Will log a warning about write access
+```
+
+### Combined Usage
+
+You can combine read detection with custom messages:
+```ruby
+legacy_column :old_price, :old_name, 
+              message: 'These fields will be removed in v2.0!', 
+              detect_reads: true
+```
+
+## Output Examples
+
+### Write Detection (Default)
+```
+USE of legacy column detected.
   User => old_email
   Do not touch this!!!
 ```
 
-## Output
+### Read Detection (When enabled)
+```
+READ of legacy column detected.
+  User => old_email
+  Do not touch this!!!
+```
+
+## Logging
 
 The gem will:
-- Log warnings to `Rails.logger` when Rails is available
+- Log warnings to `Rails.logger` when Rails is available  
 - Fall back to `puts` for non-Rails environments or when Rails.logger is not available
+
+## Options
+
+| Option | Default | Description |
+|--------|---------|-------------|
+| `message` | `"This column is set as legacy and should not be used anymore."` | Custom warning message |
+| `detect_reads` | `false` | Enable read access detection |
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
